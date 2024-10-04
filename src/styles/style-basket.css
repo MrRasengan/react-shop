@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.headingBasket{
+  margin: 0 auto;
+  width: 1600px;
+  height: 148px;
+background: rgb(248, 243, 244);
+}
+
+.headingBasket-text{
+  color: rgb(241, 109, 127);
+font-family: Lato;
+font-size: 24px;
+font-weight: 400;
+line-height: 29px;
+letter-spacing: 0%;
+text-align: left;
+padding-top: 59px;
+}
+

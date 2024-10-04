@@ -1,0 +1,130 @@
+.headingCatalog {
+  margin: 0 auto;
+  width: 1600px;
+  height: 148px;
+  background: rgb(248, 243, 244);
+}
+
+.headingCatalog-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headingCatalog-lefttext {
+  color: rgb(241, 109, 127);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+  padding-top: 59px;
+}
+
+.headingCatalog-righttext {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  padding-top: 65px;
+}
+
+.headingCatalog-righttext span {
+  color: rgb(241, 109, 127);
+}
+
+.filterCatalog {
+  display: flex;
+  height: 134px;
+}
+
+.filterCatalog-filter {
+  border: none;
+  background-color: white;
+  margin-top: 51px;
+  margin-left: 16px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  font-family: Lato;
+font-size: 14px;
+font-weight: 600;
+line-height: 17px;
+}
+
+.filterCatalog-filter:hover {
+  color: #F16D7F;
+}
+
+.filterCatalog-filter-next {
+  border: none;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  margin-left: 304px;
+  margin-top: 51px;
+  cursor: pointer;
+  color: rgb(111, 110, 110);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.filterCatalog-filter-next:hover {
+  color: #F16D7F;
+}
+
+.filterCatalog-filter-next2 {
+  border: none;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+  margin-top: 51px;
+  cursor: pointer;
+  color: rgb(111, 110, 110);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.filterCatalog-filter-next2:hover {
+  color: #F16D7F;
+}
+
+.filterCatalog-filter-next3 {
+  border: none;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+  margin-top: 51px;
+  cursor: pointer;
+  color: rgb(111, 110, 110);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.filterCatalog-filter-next3:hover {
+  color: #F16D7F;
+}
+
+.vector {
+  padding-top: 3px;
+}
+
+.selectSize-size{
+  border: none;
+  margin-right: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.selectSize-size:hover {
+  color: #F16D7F;
+}

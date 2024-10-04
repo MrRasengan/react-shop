@@ -1,0 +1,109 @@
+.headingRegistr{
+  margin: 0 auto;
+  width: 1600px;
+  height: 148px;
+  background: rgb(248, 243, 244);
+}
+
+.headingRegistr-text{
+  color: rgb(241, 109, 127);
+font-family: Lato;
+font-size: 24px;
+font-weight: 400;
+line-height: 29px;
+letter-spacing: 0%;
+text-align: left;
+padding-top: 59px;
+}
+
+.registration{
+  padding-top: 65px;
+  height: 675px;
+  display: flex;
+}
+
+.registration-left-content{
+max-width: 359px;
+}
+
+.registration-left-content input{
+
+  display: flex;
+  width: 360px;
+  height: 45px;
+  margin-bottom: 20px;
+  color: rgb(177, 177, 177);
+font-family: Lato;
+font-size: 13px;
+font-weight: 300;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: left;
+padding-left: 15px;
+}
+
+.registration-left-content h2{
+  color: rgb(34, 34, 34);
+font-family: Lato;
+font-size: 16px;
+font-weight: 300;
+line-height: 19px;
+letter-spacing: 0%;
+text-align: left;
+margin-bottom: 20px;
+}
+
+.reg-malefam{
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.registration-left-content p{
+  color: rgb(177, 177, 177);
+font-family: Lato;
+font-size: 13px;
+font-weight: 300;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: left;
+margin-bottom: 20px;
+}
+
+.registration-right-content{
+  margin-left: 160px;
+}
+
+.registration-right-content h1 {
+  color: rgb(0, 0, 0);
+font-family: Lato;
+font-size: 24px;
+font-weight: 300;
+line-height: 29px;
+letter-spacing: 0%;
+text-align: left;
+margin-bottom: 22px;
+}
+
+.registration-right-content h2 {
+  color: rgb(0, 0, 0);
+font-family: Lato;
+font-size: 24px;
+font-weight: 300;
+line-height: 29px;
+letter-spacing: 0%;
+text-align: left;
+margin-bottom: 21px;
+}
+
+.registration-right-content p{
+  display: flex;
+  color: rgb(0, 0, 0);
+font-family: Lato;
+font-size: 24px;
+font-weight: 300;
+line-height: 29px;
+letter-spacing: 0%;
+text-align: left;
+margin-bottom: 15px;
+}
