@@ -131,6 +131,10 @@ return(
         </div>
       </section>
 
+			<div className="basket">
+				
+    </div>
+
       <footer className="footer">
       <section className="subscription">
 					<h2 style={{ display: "none" }}>Подписка</h2>

@@ -19,6 +19,7 @@ import service1 from "../../img/service1.svg";
 import service2 from "../../img/service2.svg";
 import service3 from "../../img/service3.svg";
 import face from "../../img/face.svg";
+import Basket from "../basket/Basket";
 
 const products = [
 	{
@@ -240,25 +241,25 @@ const Home = () => {
 			</section>
 
 			<section className="boxList1 container">
-				<h2 style={{ display: "none" }}>Карточки товара</h2>
-				<div className="boxText">
-					<h1>Featured Items</h1>
-					<p>Shop for items based on what we featured this week</p>
-				</div>
-				<nav className="boxList2">
-					{products.map((product) => (
-						<ProductCard
-							key={product.id}
-							image={product.image}
-							title={product.title}
-							description={product.description}
-							price={product.price}
-							size={product.size}
-						/>
-					))}
-				</nav>
-				<button class="boxBtn container">Browse All Product</button>
-			</section>
+        <h2 style={{ display: "none" }}>Карточки товара</h2>
+        <div className="boxText">
+          <h1>Featured Items</h1>
+          <p>Shop for items based on what we featured this week</p>
+        </div>
+        <nav className="boxList2">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              image={product.image}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+              size={product.size}
+            />
+          ))}
+        </nav>
+        <button class="boxBtn container">Browse All Product</button>
+      </section>
 
 			<footer className="footer">
 				<h2 style={{ display: "none" }}>Подвал сайта</h2>

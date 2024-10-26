@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "../../styles/style.css";
 import "../../styles/style-catalog.css";
 import home from "../../img/home.svg";
@@ -18,8 +18,8 @@ import boxImage7 from "../../img/boxImage7.png";
 import boxImage8 from "../../img/boxImage8.png";
 import boxImage9 from "../../img/boxImage9.png";
 import ProductCardCatalog from "./ProductCardCatalog";
-import filter from '../../img/filter.svg';
-import vector from '../../img/Vector.png';
+import filter from "../../img/filter.svg";
+import vector from "../../img/Vector.png";
 import service1 from "../../img/service1.svg";
 import service2 from "../../img/service2.svg";
 import service3 from "../../img/service3.svg";
@@ -33,7 +33,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "100.00 $",
-		size: 'XS'
+		size: "XS",
 	},
 	{
 		id: 2,
@@ -42,7 +42,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "150.00 $",
-		size: 'X'
+		size: "X",
 	},
 	{
 		id: 3,
@@ -51,7 +51,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "300.00 $",
-		size: 'S'
+		size: "S",
 	},
 	{
 		id: 4,
@@ -60,7 +60,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "110.00 $",
-		size: 'XS'
+		size: "XS",
 	},
 	{
 		id: 5,
@@ -69,7 +69,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "230.00 $",
-		size: 'S'
+		size: "S",
 	},
 	{
 		id: 6,
@@ -78,7 +78,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "400.00 $",
-		size: 'X'
+		size: "X",
 	},
 	{
 		id: 7,
@@ -87,7 +87,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "300.00 $",
-		size: 'XL'
+		size: "XL",
 	},
 	{
 		id: 8,
@@ -96,7 +96,7 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "400.00 $",
-		size: 'L'
+		size: "L",
 	},
 	{
 		id: 9,
@@ -105,31 +105,39 @@ const products = [
 		description:
 			"Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
 		price: "100.00 $",
-		size: 'S'
+		size: "S",
 	},
 ];
 
 const Catalog = () => {
-
-
-  const [menuVisible, setMenuVisible] = useState(false);
+	const [menuVisible, setMenuVisible] = useState(false);
 	const toggleMenu = () => {
 		setMenuVisible(!menuVisible);
 	};
 
-	const [selectSize, setSelectSize] = useState(false);
-	const toggleSize = () => {
-		setSelectSize(!selectSize);
+	const [selectedSize, setSelectedSize] = useState("All"); // Начальное состояние - 'All'
+	const [selectSize, setSelectSize] = useState(false); // Состояние для отображения меню выбора размеров
+
+	const handleSizeSelect = (size) => {
+		setSelectedSize(size);
+		setSelectSize(false); // Закрыть меню после выбора размера
 	};
 
-  return(
-  <div>
-    <header className="header">
+	const toggleSize = () => {
+		setSelectSize((prevState) => !prevState); // Переключить состояние отображения меню
+	};
+
+	const filteredProducts =
+		selectedSize === "All" ? products : products.filter((product) => product.size === selectedSize);
+
+	return (
+		<div>
+			<header className="header">
 				<nav className="navigation container">
 					<div className="leftHeader">
-          <Link to="/">
-            <img src={home} alt="home" />
-          </Link>
+						<Link to="/">
+							<img src={home} alt="home" />
+						</Link>
 						<button>
 							<img src={img1} alt="img1" />
 						</button>
@@ -149,16 +157,16 @@ const Catalog = () => {
 									<h5 className="menu-text">MAN</h5>
 									<ul className="menu-list">
 										<li>
-                    <Link to="/catalog">Accessories</Link>
+											<Link to="/catalog">Accessories</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Bags</Link>
+											<Link to="/catalog">Bags</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Denim</Link>
+											<Link to="/catalog">Denim</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">T-Shirts</Link>
+											<Link to="/catalog">T-Shirts</Link>
 										</li>
 									</ul>
 								</div>
@@ -166,19 +174,19 @@ const Catalog = () => {
 									<h5 className="menu-text">WOMAN</h5>
 									<ul className="menu-list">
 										<li>
-                    <Link to="/catalog">Accessories</Link>
+											<Link to="/catalog">Accessories</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Jackets & Coats</Link>
+											<Link to="/catalog">Jackets & Coats</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Polos</Link>
+											<Link to="/catalog">Polos</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">T-Shirts</Link>
+											<Link to="/catalog">T-Shirts</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Shirts</Link>
+											<Link to="/catalog">Shirts</Link>
 										</li>
 									</ul>
 								</div>
@@ -186,68 +194,75 @@ const Catalog = () => {
 									<h5 className="menu-text">KIDS</h5>
 									<ul className="menu-list">
 										<li>
-                    <Link to="/catalog">Accessories</Link>
+											<Link to="/catalog">Accessories</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Jackets & Coats</Link>
+											<Link to="/catalog">Jackets & Coats</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Polos</Link>
+											<Link to="/catalog">Polos</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">T-Shirts</Link>
+											<Link to="/catalog">T-Shirts</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Shirts</Link>
+											<Link to="/catalog">Shirts</Link>
 										</li>
 										<li>
-                    <Link to="/catalog">Bags</Link>
+											<Link to="/catalog">Bags</Link>
 										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 						<Link to="/registr">
-            <button className="btnDel">
-              <img src={img3} alt="img3" />
-            </button>
-          </Link>
-          <Link to="/basket">
-            <button className="btnDel btnCounter">
-              <img src={img4} alt="img4" />
-            </button>
-          </Link>
+							<button className="btnDel">
+								<img src={img3} alt="img3" />
+							</button>
+						</Link>
+						<Link to="/basket">
+							<button className="btnDel btnCounter">
+								<img src={img4} alt="img4" />
+							</button>
+						</Link>
 					</div>
 				</nav>
 			</header>
 
 			<div className="headingCatalog">
 				<div className="headingCatalog-content container">
-				<h1 className="headingCatalog-lefttext">NEW ARRIVALS </h1>
-				<p className="headingCatalog-righttext">HOME / MEN / <span>NEW ARRIVALS</span></p>
+					<h1 className="headingCatalog-lefttext">NEW ARRIVALS </h1>
+					<p className="headingCatalog-righttext">
+						HOME / MEN / <span>NEW ARRIVALS</span>
+					</p>
 				</div>
 			</div>
 
 			<div className="filterCatalog container">
-				<button className="filterCatalog-filter">FILTER <img className="vector" src={filter} alt="filter" /></button>
-				<button className="filterCatalog-filter-next">TRENDING NOW <img className="vector" src={vector} alt="vector"/></button>
-				<button className="filterCatalog-filter-next2" onClick={toggleSize}>SIZE <img className="vector" src={vector} alt="vector"/>
-				<div className={`selectSize ${selectSize ? '' : 'hidden'}`}>
-				<button className="selectSize-size" >XS</button>
-        <button className="selectSize-size" >S</button>
-        <button className="selectSize-size" >XL</button>
-				<button className="selectSize-size" >X</button>
-        <button className="selectSize-size" >L</button>
-        <button className="selectSize-size" >All</button> {/* Кнопка для сброса фильтра */}
-				</div>
+				<button className="filterCatalog-filter">
+					FILTER <img className="vector" src={filter} alt="filter" />
 				</button>
-				<button className="filterCatalog-filter-next3">PRISE <img className="vector" src={vector} alt="vector"/></button>
+				<button className="filterCatalog-filter-next">
+					TRENDING NOW <img className="vector" src={vector} alt="vector" />
+				</button>
+				<button className="filterCatalog-filter-next2" onClick={toggleSize}>
+					SIZE <img className="vector" src={vector} alt="vector" />
+					<div className={`selectSize ${selectSize ? "" : "hidden"}`}>
+						{["XS", "S", "L", "XL", "All"].map((size) => (
+							<button key={size} className="selectSize-size" onClick={() => handleSizeSelect(size)}>
+								{size}
+							</button>
+						))}
+					</div>
+				</button>
+				<button className="filterCatalog-filter-next3">
+					PRICE <img className="vector" src={vector} alt="vector" />
+				</button>
 			</div>
 
 			<section className="boxList1 container">
-
 				<nav className="boxList2">
-					{products.map((product) => (
+					{filteredProducts.map((product) => (
 						<ProductCardCatalog
 							key={product.id}
 							image={product.image}
@@ -357,12 +372,8 @@ const Catalog = () => {
 					</div>
 				</section>
 			</footer>
+		</div>
+	);
+};
 
-
-
-			
-  </div>
-  );
-  }
-
-  export default Catalog;
+export default Catalog;
